@@ -1,0 +1,82 @@
+.trainers {
+  &__title {
+    margin-bottom: 54px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__wrapper {
+    padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+  }
+  &__content {
+    margin-bottom: 75px;
+  }
+  .swiper-slide {
+    width: 360px;
+    @include small-tablet {
+      width: 220px;
+    }
+  }
+  .swiper-scrollbar-drag {
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    @include small-tablet {
+      min-height: 200px;
+    }
+  }
+  &__img {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 500px;
+    object-fit: cover;
+    @include small-tablet {
+      height: 340px;
+    }
+    @include mobile {
+      height: 220px;
+    }
+  }
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--dark-color);
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+  &__post {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--descr-color);
+    @include small-tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__btn {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--brand-color);
+    margin-top: auto;
+    text-align: left;
+  }
+  &__nav {
+    @include flex-all-sb;
+  }
+  &__scroll {
+    border-radius: 40px;
+    width: 360px;
+    height: 5px;
+    background-color: rgba(20, 16, 36, 0.08);
+  }
+}

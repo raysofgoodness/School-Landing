@@ -1,0 +1,145 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brand-color);
+  padding: 25px 30px;
+  min-width: 260px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--light-color);
+  text-align: center;
+  &--dark {
+    background-color: var(--dark-color);
+  }
+}
+
+.logo {
+  display: block;
+  @include mobile {
+    width: 136px;
+    height: 13px;
+  }
+}
+
+.phone {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 160%;
+  color: var(--brand-color);
+}
+
+.section-offset {
+  padding: 80px 0;
+  @include small-tablet {
+    padding: 60px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 160%;
+  color: var(--brand-color);
+  @include high-desktop {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  @include mobile {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 100px;
+    width: 26px;
+    height: 2px;
+    background-color: var(--brand-color);
+    &:first-child {
+      margin-top: -7px;
+    }
+    &:last-child {
+      left: 9px;
+      width: 13px;
+      margin-top: 7px;
+      transform: translateY(-50%);
+    }
+  }
+  @include high-tablet {
+    display: block;
+  }
+}
+
+.burger-close {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: var(--container-offset);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url('../img/close.svg');
+  background-position: center;
+  background-size: 14px 12px;
+  background-repeat: no-repeat;
+  @include high-tablet {
+    display: block;
+  }
+}
+
+.tooltip {
+  margin-left: 10px;
+  &__btn {
+    @include flex-all-center;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(20, 16, 36, 0.08);
+    border-radius: 50%;
+    svg {
+      width: 4px;
+      height: 14px;
+    }
+    &:focus {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    @include hover {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__txt {
+    border-radius: 5px;
+    padding: 15px 20px;
+    background: var(--light-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--dark-color);
+    box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3 ease-in-out;
+  }
+}

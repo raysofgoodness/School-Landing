@@ -7,6 +7,14 @@
   font-size: 18px;
   line-height: 160%;
   color: var(--descr-color);
+  @include high-tablet {
+    top: 24px;
+    right: 24px;
+  }
+  @include small-tablet {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .graph-modal {
@@ -23,6 +31,9 @@
   &__top {
     margin-bottom: 40px;
     display: flex;
+    @include high-tablet {
+      margin-bottom: 20px;
+    }
   }
   &__image {
     margin-right: 40px;
@@ -59,7 +70,7 @@
         opacity: 1;
         width: 5px;
         border-radius: 40px;
-        background-color: var(--dark-color);
+        background-color: var(--brand-color);
       }
     }
   }
@@ -84,6 +95,9 @@
   @include small-tablet {
     padding-top: 80px;
   }
+  @include high-tablet {
+    padding: 24px;
+  }
 }
 
 .social {
@@ -99,11 +113,10 @@
     width: 30px;
     height: 30px;
     svg {
-      display: block;
       width: 100%;
       height: 100%;
-      fill: var(--dark-color);
       object-fit: cover;
+      fill: var(--brand-color);
     }
   }
 }
@@ -111,7 +124,7 @@
 .tabs {
   &__top {
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+    border-bottom: 1px solid var(--brand-color);
   }
   &__nav {
     max-width: 70%;
